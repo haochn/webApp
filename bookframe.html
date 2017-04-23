@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+<style>
+.bookframeBody{
+    /*background-color: #fff;*/
+}
+.main{
+    width:100%;
+   
+}
+.box{
+    width:40%;
+    margin:0 auto;
+    padding:5% 5% 0 5%;
+    float:left;
+    cursor: pointer;
+   
+}
+
+.bookimg{
+
+    width:100%;
+
+}
+.bookimg img{
+    width:100%;
+    display:block;
+}
+.booktitle{
+
+    text-align: center;
+    padding:8% 4% 0 4%;
+    font-size:12px;
+}
+.book_nav {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background: #000;
+}
+.book_nav_title {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+    color: #d5d5d6;
+}
+
+
+</style>
+	</head>
+<body class="bookframeBody">
+    <div class="book_nav">
+        <div class="book_nav-warp">
+            <div class="icon-back"></div>
+            <div class="book_nav_title" >书架</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="box">
+            <div class="bookimg">
+                <img src="img/book_hf.png" alt="">
+            </div>
+            <div class="booktitle">哈弗凌晨四点半</div>
+        </div>
+        <div class="box">
+            <div class="bookimg">
+                <img src="img/book_ssss.png" alt="">
+            </div>
+            <div class="booktitle">三生三世十里桃花</div>
+        </div>
+        <div class="box">
+            <div class="bookimg">
+                <img src="img/book_rm.png" alt="">
+            </div>
+            <div class="booktitle">人民的名义</div>
+        </div>
+        <div class="box">
+            <div class="bookimg">
+                <img src="img/book_bly.png" alt="">
+            </div>
+            <div class="booktitle">白鹿原</div>
+        </div>
+        
+         
+
+    </div>
+
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+(function(){
+    
+    $('.box').each(function(){
+       $(this).click(function(){
+            var index=$(this).index();
+            console.log(this);
+            console.log(index)
+            if(index==0){
+                window.location.href="./book.html"
+            }
+            if(index==1){
+                window.location.href="./book2.html"
+            }
+            if(index==2){
+                window.location.href="./book3.html"
+            }
+            if(index==3){
+                window.location.href="./book4.html"
+            }
+        }) 
+    })
+    
+
+})();
+
+
+
+</script>
+<!-- <script type="text/javascript">
+$(function(){
+    setMainWidth($('.main'))
+    change();
+});
+$(window).resize(function(){
+ 
+  setMainWidth($('.main'))   
+  change();  
+})
+function minHeight(height,heights){
+    for(var index=0;index<heights.length;index++){
+      
+        if(heights[index]===height){
+          
+            return index;            
+        }       
+    }
+}
+function realW(obj){
+    return obj.width()+2*(parseInt(obj.css('padding'))+parseInt(obj.css('margin')));
+}
+function realH(obj){
+    return obj.height()+2*(parseInt(obj.css('padding'))+parseInt(obj.css('margin')));
+}
+function change(){
+  //获取浏览器的宽度
+   var clientWidth=document.body.clientWidth;
+   var img=$('.box');
+   //获取屏幕的宽度
+   var imgWidth=realW($(img[0]));
+   var heights=[];  
+   //获取每行的盒子数
+   var colums=Math.floor(clientWidth/imgWidth);   
+    var left=(clientWidth-imgWidth*colums)/2;
+   //获取每个盒子的高度
+   img.each(function(i){
+    if(i<colums)
+        heights.push(realH($(img[i])));   
+   })  
+   var box=$('.box');
+   //获取盒子的个数
+   var boxLength=box.length;
+  
+    for(var i=0;i<boxLength;i++){
+        if(i<colums){
+          $(img[i]).css('top',0);
+          $(img[i]).css('left',i*imgWidth+left);
+        }
+        else{ 
+          //获取最小的盒子高度
+          height=Math.min.apply(null, heights);
+          //最小盒子的索引值
+          indexH=minHeight(height,heights);
+          heights[indexH]=heights[indexH]+ realH($(img[i]));
+         
+          $(img[i]).css('top',height);
+          $(img[i]).css('left',(indexH)*imgWidth+left);       
+        }
+    }
+}
+function setMainWidth(obj){
+   var width=document.body.clientWidth ;
+    obj.width(width);
+}
+</script> -->
+
+</html>
