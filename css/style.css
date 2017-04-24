@@ -187,6 +187,8 @@ body {
     width: 26px;
     margin: 0 auto;
     position: relative;
+    height: 70px;
+    top: 15px;
 }
 
 .icon-menu {
