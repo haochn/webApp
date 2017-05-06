@@ -295,3 +295,35 @@ body {
     left: 42px;
     color: #d5d5d6;
 }
+
+/*首页样式*/
+.index {
+    background-color: #171E28;
+    position: relative;
+}
+
+.says {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%,0);
+    letter-spacing: 3px;
+    color: #FAC189;
+    line-height: 2;
+    font-size: 14px;
+    text-indent: 2em;
+}
+
+.author {
+    position: absolute;
+    bottom: 23%;
+    left: 50%;
+    width: 80%;
+    text-align: right;
+    transform: translate(-50%,0);
+    letter-spacing: 3px;
+    color: #FAC189;
+    line-height: 1.8;
+    font-size: 14px;
+}
