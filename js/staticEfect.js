@@ -270,6 +270,5 @@ function setBottomEffect() {
   $('.icon-back').click(function(){
      window.location.href="./bookframe.html"
   });
-
 })(); 
 

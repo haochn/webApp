@@ -44,6 +44,8 @@
 			
 				//如果成功则获取数据
 				if(data.result==0){
+					//隐藏加载弹窗
+					$('.wait-loading-shadow').hide();
 					//设置默认id为0（第一章节内容）
 					chapter_id_3=Util.StorageGetter('chapter_id_3');
 					chapter_id_3=parseInt(chapter_id_3,10);

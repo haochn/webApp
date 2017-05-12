@@ -44,6 +44,7 @@
 			
 				//如果成功则获取数据
 				if(data.result==0){
+
 					//设置默认id为0（第一章节内容）
 					chapter_id_2=Util.StorageGetter('chapter_id_2');
 					chapter_id_2=parseInt(chapter_id_2,10);
@@ -63,7 +64,7 @@
 				        		callback:"mingyang_fiction_chapter",
 
 				        		success:function(result){
-				        			        			
+				 	      			
 				        			var data=$.base64.decode(result),
 				        				json =decodeURIComponent(escape(data)),
 				        				jsonObj=JSON.parse(json),

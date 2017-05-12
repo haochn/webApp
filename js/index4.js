@@ -62,8 +62,7 @@
 				        		cache:true,
 				        		callback:"mingyang_fiction_chapter",
 
-				        		success:function(result){
-				        			        			
+				        		success:function(result){	       			
 				        			var data=$.base64.decode(result),
 				        				json =decodeURIComponent(escape(data)),
 				        				jsonObj=JSON.parse(json),
