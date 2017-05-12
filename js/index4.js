@@ -74,11 +74,12 @@
 				        				html+='<p>'+jsonObj.p[i]+'</p>';
 				        			}
 				        			$('#fiction_container').html(html);
-				        			// var listBg=Util.StorageGetter('background_color');
-            			// 			$('.list').css('background',listBg);
+				     
 				        		}
 				        	});
 						}else{
+							//显示加载弹窗
+							$('.wait-loading-shadow').show();
 							console.log('获取相应的章节的url失败！！')
 						}
 						

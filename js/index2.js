@@ -51,8 +51,7 @@
 					chapter_id_2=chapter_id_2||0;
 					url='./data/2/data'+chapter_id_2+'.json';
 					
-					//获取相应的章节信息
-				
+					//获取相应的章节信息				
 					$.get(url,function(data){
 						// console.log(data);
 						if(data.result==0){
@@ -76,15 +75,15 @@
 				        				html+='<p>'+jsonObj.p[i]+'</p>';
 				        			}
 				        			$('#fiction_container').html(html);
-				        			// var listBg=Util.StorageGetter('background_color');
-            			// 			$('.list').css('background',listBg);
+				       
 				        		}
 				        	});
 						}else{
+							//显示加载弹窗
+							$('.wait-loading-shadow').show();
 							console.log('获取相应的章节的url失败！！')
 						}
 						
-
 					},'json');
 				
 				}else{

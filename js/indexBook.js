@@ -6,7 +6,7 @@ $(function(){
 
 		window.location.href="./bookframe.html";
 
-	},3000)
+	},3000);
 });
 
 function setStyle(){
