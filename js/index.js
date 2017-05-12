@@ -44,6 +44,8 @@
 			
 				//如果成功则获取数据
 				if(data.result==0){
+					//隐藏加载弹窗
+					$('.wait-loading-shadow').hide(); 
 					//设置默认id为0（第一章节内容）
 					chapter_id=Util.StorageGetter('chapter_id');
 					chapter_id=parseInt(chapter_id,10);
@@ -63,7 +65,8 @@
 				        		callback:"mingyang_fiction_chapter",
 
 				        		success:function(result){
-				        			        			
+				     //    			//隐藏加载弹窗
+									// $('.wait-loading-shadow').hide();      			
 				        			var data=$.base64.decode(result),
 				        				json =decodeURIComponent(escape(data)),
 				        				jsonObj=JSON.parse(json),
@@ -87,7 +90,8 @@
 					},'json');
 				
 				}else{
-					console.log('获取章节信息失败！！')	
+					
+					console.log('获取章节信息失败！！');
 				}
 			};
 		//下一页功能
