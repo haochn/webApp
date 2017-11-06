@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>
+    </title>
+</head>
+
+<body>
+    <script>
+    var C = function() {
+        this.foo = 'bar';
+        this.baz = 'bim';
+    };
+    C.prototype.bop = 'bip';
+
+    var c = new C();
+    console.log(c)
+
+
+
+
+
+    function iterate(obj) {
+        var result = [],
+            str = '';
+        for (var i in obj) {
+            if (obj.hasOwnProperty(i)) {
+                str = i + ": " + obj[i];
+                result.push(str)
+            }
+        }
+        return result;
+    }
+
+    var res = iterate(new C());
+    console.log(res)
+    </script>
+</body>
+
+</html>
